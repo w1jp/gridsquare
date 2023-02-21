@@ -60,9 +60,7 @@ if __name__ == '__main__':
 	parser.add_argument('--lat', help='decimal latidude (-90 – 90)', type=float)
 	parser.add_argument('--lng', type=float, help='decimal longitude (-180 – 180)')
 	args = parser.parse_args()
-	print('args: {}'.format(len(sys.argv)))
 
-	#g0 = Gridsquare()
 	g1 = Gridsquare(args.lat, args.lng)
 
 	print('Maidenhead Locator System Gridsquare for {{latidude: {}, longitude: {}}} is: {}'.format(g1.lat, g1.lng, g1.mls))
